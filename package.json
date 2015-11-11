@@ -1,0 +1,22 @@
+{
+  "name": "2ndavenue",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/stephsun/2ndavenue.git"
+  },
+  "author": "Yumeng Sun",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/stephsun/2ndavenue/issues"
+  },
+  "homepage": "https://github.com/stephsun/2ndavenue#readme",
+  "dependencies": {
+    "express": "^4.13.3"
+  }
+}
