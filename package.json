@@ -18,6 +18,9 @@
   "homepage": "https://github.com/stephsun/2ndavenue#readme",
   "dependencies": {
     "express": "^4.13.3",
-    "hbs": "^4.0.0"
+    "hbs": "^4.0.0",
+    "pg": "^4.4.3",
+    "pg-hstore": "^2.3.2",
+    "sequelize": "^3.13.0"
   }
 }
