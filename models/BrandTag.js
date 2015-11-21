@@ -4,7 +4,6 @@ var Sequelize = require("sequelize");
 
 module.exports = function(sequelize, data) {
 	var BrandTag = sequelize.define('BrandTag', {
-		rule: Sequelize.STRING
 	});
 
 	var Brand = data.Brand;
