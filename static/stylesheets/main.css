@@ -12,3 +12,18 @@ body {
 	list-style: none;
 	display: inline;
 }
+
+#sidebar > ul > li > a,
+#brand-list > ul > li > a,
+#letter-menu > ul > li > a
+{
+	color: black;
+}
+
+#sidebar > ul > li > a:hover,
+#letter-menu > ul > li > a:hover
+{
+	background-color: black;
+	color: white;
+    text-decoration: none;
+}
