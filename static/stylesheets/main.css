@@ -1,0 +1,14 @@
+body {
+	font-family: 'Open Sans', sans-serif;
+}
+
+#sidebar > ul > li,
+#brand-list > ul > li
+{
+	list-style: none;
+}
+
+#letter-menu > ul > li {
+	list-style: none;
+	display: inline;
+}
