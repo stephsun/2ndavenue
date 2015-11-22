@@ -1,7 +1,7 @@
 "use strict";
 
 var Sequelize = require("sequelize");
-var sequelize = new Sequelize('postgres://localhost:5432/stephanie');
+var sequelize = new Sequelize(process.env.DATABASE_URL || 'postgres://localhost:5432/stephanie');
 
 var Brand = require('./Brand')(sequelize);
 var Tag = require('./Tag')(sequelize);

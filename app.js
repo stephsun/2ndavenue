@@ -14,7 +14,7 @@ app.set('views', path.join(__dirname, 'templates'));
 app.use(express.static('static'));
 
 app.get('/', function (req, res) {
-    res.render('index', { title: 'Home', message: 'Hello there!'});
+	res.send('Hello World!');
 });
 
 models.sequelize.sync().then(function () {
