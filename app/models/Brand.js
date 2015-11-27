@@ -1,8 +1,8 @@
 "use strict";
 
-var Sequelize = require("sequelize");
+import Sequelize from 'sequelize';
 
-module.exports = function(sequelize) {
+export default (sequelize) => {
     var Brand = sequelize.define('Brand', {
         name: Sequelize.STRING,
         uri: Sequelize.STRING
@@ -10,4 +10,3 @@ module.exports = function(sequelize) {
 
     return Brand;
 };
-

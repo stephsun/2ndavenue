@@ -35,7 +35,6 @@ function launchProcessInDebugMode (processName, debugPort) {
     });
 
     bindProcessEvents(proc);
-
     return proc;
 }
 
@@ -86,7 +85,7 @@ module.exports = function (grunt) {
     grunt.registerTask('launch', function () {
         exit('SIGTERM');
         _.each([
-            'app',
+            'dist/app',
         ], function (processName) {
             if (grunt.option('inspect')) {
                 var debugPort = getRandomPort();

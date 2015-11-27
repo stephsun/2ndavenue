@@ -1,9 +1,9 @@
 'use strict';
 
+require("babel-polyfill");
+
 var fs = require('fs');
 var _ = require('lodash');
-
-require('babel-polyfill');
 
 module.exports = function (grunt) {
     var loadConfig = function (configPath) {
