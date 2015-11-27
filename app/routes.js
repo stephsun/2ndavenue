@@ -5,6 +5,6 @@ import Main from './views/main';
 
 export default (
     <Router>
-        <Route path='/' component={ Main } />
+        <Route path='/test' component={ Main } />
     </Router>
 );

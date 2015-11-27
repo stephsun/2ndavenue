@@ -25,6 +25,7 @@ module.exports = function (grunt) {
     grunt.registerTask('default', [
         'env',
         'babel',
+        'sass',
         'launch',
         'watch'
     ]);

@@ -7,21 +7,14 @@ import Transmit from 'react-transmit';
 import { createLocation } from 'history';
 
 import { sequelize } from './models';
-import template from './templates/main';
+import layout from './layout';
 import routes from './routes';
 
 const port = process.env.PORT || 3000;
 const host = process.env.HOSTNAME || 'localhost';
 const app = express();
 
-app.set('view engine', 'hbs');
-app.set('views', path.join(__dirname, 'templates'));
-
-app.use(express.static('static'));
-
-app.get('/old', (req, res) => {
-	res.render('index');
-});
+app.use(express.static(__dirname + '/static'));
 
 app.get('*', (req, res) => {
 	const location = createLocation(req.path);
@@ -37,8 +30,11 @@ app.get('*', (req, res) => {
 		// 	return;
 		// }
 
-		Transmit.renderToString(RoutingContext, renderProps).then(({ reactString, reactData }) => {
-			res.send(Transmit.injectIntoMarkup(template(reactString), reactData));
+		Transmit.renderToString(
+			RoutingContext,
+			renderProps
+		).then(({ reactString, reactData }) => {
+			res.send(Transmit.injectIntoMarkup(layout(reactString), reactData));
 		});
 	});
 });
