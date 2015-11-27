@@ -3,6 +3,8 @@
 var fs = require('fs');
 var _ = require('lodash');
 
+require('babel-polyfill');
+
 module.exports = function (grunt) {
     var loadConfig = function (configPath) {
         var files = fs.readdirSync(configPath);
@@ -13,9 +15,7 @@ module.exports = function (grunt) {
         }, {});
     };
 
-    // load npm grunt tasks
-    grunt.loadNpmTasks('grunt-env');
-    grunt.loadNpmTasks('grunt-contrib-watch');
+    require('load-grunt-tasks')(grunt);
     // load custom grunt tasks
     grunt.loadTasks('./grunt/tasks');
 
@@ -24,6 +24,7 @@ module.exports = function (grunt) {
 
     grunt.registerTask('default', [
         'env',
+        'babel',
         'launch',
         'watch'
     ]);
